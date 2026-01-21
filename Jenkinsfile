@@ -4,12 +4,7 @@ pipeline {
     tools {
         nodejs 'node-20'
     }
-    stage('Fetch Artifact') {
-      steps {
-        sh 'aws s3 cp s3://my-artifact-bucket/app.zip .'
-      }
-    }
-  }
+
 
     stages {
         stage('Checkout') {
